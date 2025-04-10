@@ -1,17 +1,15 @@
 <?php
-
 /*
  * Classe représentant un utilisateur
  */
 
 class Utilisateur
 {
-    public $nom;
-    public $email;
-    public $identifiant;
-    public $dateInscription;
+    public string $nom;
+    public string $email;
+    public string $identifiant;
+    public DateTime $dateInscription;
 
-    
 
     /**
      * Get the value of nom
@@ -19,6 +17,25 @@ class Utilisateur
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * Get the value of nom + identifiant
+     */
+    public function getNomIdentifiant()
+    {
+        return $this->nom . ' (' . $this->identifiant . ')';
+    }
+
+    /**
+     * Get th value of nom + dateInscription
+     */
+    public function getNomDateInscription() 
+    {
+        return $this->nom 
+            . ' (inscit(e) depuis le ' 
+            . $this->dateInscription->format('d/m/Y') 
+            . ')';
     }
 
     /**
