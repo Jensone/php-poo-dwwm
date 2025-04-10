@@ -20,25 +20,6 @@ class Utilisateur
     }
 
     /**
-     * Get the value of nom + identifiant
-     */
-    public function getNomIdentifiant()
-    {
-        return $this->nom . ' (' . $this->identifiant . ')';
-    }
-
-    /**
-     * Get th value of nom + dateInscription
-     */
-    public function getNomDateInscription() 
-    {
-        return $this->nom 
-            . ' (inscit(e) depuis le ' 
-            . $this->dateInscription->format('d/m/Y') 
-            . ')';
-    }
-
-    /**
      * Set the value of nom
      *
      * @return  self
@@ -108,5 +89,26 @@ class Utilisateur
         $this->dateInscription = $dateInscription;
 
         return $this;
+    }
+
+    // Custom methods
+
+    /**
+     * Get the value of nom + identifiant
+     */
+    public function getNomIdentifiant()
+    {
+        return $this->nom . ' (' . $this->identifiant . ')';
+    }
+
+    /**
+     * Get the value of nom + dateInscription
+     */
+    public function getNomDateInscription() 
+    {
+        return $this->nom 
+            . ' (inscit(e) depuis le ' 
+            . $this->dateInscription->format('d/m/Y') 
+            . ')';
     }
 }

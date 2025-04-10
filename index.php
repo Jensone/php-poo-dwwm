@@ -10,10 +10,8 @@ $tom
     ->setDateInscription(new DateTime('now')) // Date du jour
 ;
 
-$tomId = $tom->getNomIdentifiant();
-
-
+$tomId = $tom->getNomDateInscription();
 
 $martin = new Utilisateur();
 
-var_dump($tomId);
+var_dump($tom);
